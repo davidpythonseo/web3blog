@@ -2,9 +2,14 @@
 title: "Keyword Research"
 date: 2023-06-07T13:25:14+08:00
 draft: false
+ShowToc: true
+TocOpen: true
 ---
 
 # :x: 关键词研究
+
+## xxx
+## xxx
 
 - [ ] Top Trending `Keyword`  (June 2023)
 - [ ] Top Trending `Hashtag`  (June 2023)
