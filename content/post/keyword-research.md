@@ -17,7 +17,7 @@ enableEmoji = true
 ```
 - 在线表情包 [点击进入](https://gist.github.com/rxaviers/7360908)
 
-表情包
+---
 
 ## :x: 关键词研究
 
@@ -27,6 +27,8 @@ enableEmoji = true
 
 ![](https://raw.githubusercontent.com/davidpythonseo/web3blog/main/content/post/images/trending-topics.png)
 
+---
+
 ## :tent: youtube视频
 
 - 关键词: `hugo theme tutorial` hugo 模版教程
@@ -35,6 +37,8 @@ enableEmoji = true
 - https://youtu.be/_QSr2_pxIJs
 - 关键词: `hugo tutorial` hugo 经典系统教程
 - https://youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3
+
+---
 ## :no_bell: 修改 Paste Image配置
 - 图片包括路径 
 > `images`
@@ -43,10 +47,12 @@ enableEmoji = true
 
 ![](https://raw.githubusercontent.com/davidpythonseo/web3blog/main/content/post/images/vscode图片修改.png)
 
+---
 ## :books: 打开Table Of Content
 
 ![](https://raw.githubusercontent.com/davidpythonseo/web3blog/main/content/post/images/toc.png)
 
+---
 ## :diamonds: xxxx
 
 ![](https://raw.githubusercontent.com/davidpythonseo/web3blog/main/content/post/images/ahref-test.png)
