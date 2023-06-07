@@ -23,13 +23,13 @@ winget install --id Git.Git -e --source winget
 
 ### Hugo 建立新项目
 ```bash
-hugo new site web3blog
+hugo new site web3-blog
 ```
 
 
 ### cd 进入项目根目录
 ```bash
-cd web3blog
+cd web3-blog
 ```
 
 
@@ -42,7 +42,7 @@ git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git t
 
 ### 修改 `hugo.toml` 配置文件
 ```
-baseURL = 'https://「你的Github账号」.github.io/web3blog/'
+baseURL = 'https://「你的Github账号」.github.io/web3-blog/'
 languageCode = 'en-us'
 title = 'Web3 撸毛日记'
 theme = 'PaperMod'
@@ -93,7 +93,7 @@ Watching for config changes in /Users/david/Desktop/web-blog/hugo.toml
 Environment: "development"
 Serving pages from memory
 Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
-Web Server is available at http://localhost:1313/web3blog/ (bind address 127.0.0.1)
+Web Server is available at http://localhost:1313/web3-blog/ (bind address 127.0.0.1)
 Press Ctrl+C to stop
 ```
 
@@ -103,9 +103,9 @@ Press Ctrl+C to stop
 
 ### 配置Github SSH链接
 ```bash
-ssh-keygen -t ed25519 -C "your_email@example.com" 
+ssh-keygen -t ed25519 -C "你的Github邮箱 your_email@example.com" 
 ```
-> 生成密钥后看提示找到文件 `id_ed25519.pub`
+> 生成密钥后看提示找到文件 `id_ed25519.pub` 路径
 > 
 > 使用 `cat ~/.ssh/id_ed25519.pub` 命令读取文件内容填入Github
 
