@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Web3 撸毛日记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Jun 2023 19:35:23 +0800</lastBuildDate><atom:link href="https://davidpythonseo.github.io/web3blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Jun 2023 19:55:57 +0800</lastBuildDate><atom:link href="https://davidpythonseo.github.io/web3blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>完整版Githug Hugo 个人博客</title>
+      <link>https://davidpythonseo.github.io/web3blog/post/%E5%AE%8C%E6%95%B4%E7%89%88githug-hugo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Wed, 07 Jun 2023 19:55:57 +0800</pubDate>
+      
+      <guid>https://davidpythonseo.github.io/web3blog/post/%E5%AE%8C%E6%95%B4%E7%89%88githug-hugo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>🎉 Windown 本地安装 Hugo 打开 Hugo windows installation 使用管理员权限 winget 包管理工具安装 winget install Hugo.Hugo.Extended 打开 Git windows installation winget install --id Git.Git -e --source winget Hugo 建立新项目 hugo new site web3blog cd 进入项目根目录 cd web3blog 安装 hugo 模板 git init git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1 git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod 修改 hugo.toml 配置文件 baseURL = &amp;#39;https://「你的Github账号」.github.io/web3blog/&amp;#39; languageCode = &amp;#39;en-us&amp;#39; title = &amp;#39;Web3 撸毛日记&amp;#39; theme = &amp;#39;PaperMod&amp;#39; enableEmoji = true # 开启MarkDown表情包解析 修改文章模版 achetypes/default.</description>
+    </item>
+    
     <item>
       <title>逛百度</title>
       <link>https://davidpythonseo.github.io/web3blog/post/%E9%80%9B%E7%99%BE%E5%BA%A6/</link>
