@@ -36,4 +36,9 @@ TocOpen: true
 
 ## youtube视频
 
-{{ youtube _QSr2_pxIJs}}
+- 关键词: `hugo theme tutorial` hugo 模版教程
+- https://youtu.be/Vj5zy2q7O9U
+- 关键词: `hugo github pages` hugo github部署
+- https://youtu.be/_QSr2_pxIJs
+- 关键词: `hugo tutorial` hugo 经典系统教程
+- https://youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3
