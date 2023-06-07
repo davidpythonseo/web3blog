@@ -5,6 +5,19 @@ draft: false
 ShowToc: true
 TocOpen: true
 ---
+##  :tada: Markdow 表情包
+- 添加网站配置
+```
+baseURL = 'https://davidpythonseo.github.io/web3blog/'
+languageCode = 'en-us'
+title = 'Web3 撸毛日记'
+theme = 'PaperMod'
+
+enableEmoji = true
+```
+- 在线表情包 [点击进入](https://gist.github.com/rxaviers/7360908)
+
+表情包
 
 ## :x: 关键词研究
 
@@ -14,7 +27,7 @@ TocOpen: true
 
 ![](https://raw.githubusercontent.com/davidpythonseo/web3blog/main/content/post/images/trending-topics.png)
 
-## youtube视频
+## :tent: youtube视频
 
 - 关键词: `hugo theme tutorial` hugo 模版教程
 - https://youtu.be/Vj5zy2q7O9U
@@ -22,7 +35,7 @@ TocOpen: true
 - https://youtu.be/_QSr2_pxIJs
 - 关键词: `hugo tutorial` hugo 经典系统教程
 - https://youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3
-## 修改 Paste Image配置
+## :no_bell: 修改 Paste Image配置
 - 图片包括路径 
 > `images`
 - 粘贴补充路径 
@@ -30,10 +43,10 @@ TocOpen: true
 
 ![](https://raw.githubusercontent.com/davidpythonseo/web3blog/main/content/post/images/vscode图片修改.png)
 
-## 打开Table Of Content
+## :books: 打开Table Of Content
 
 ![](https://raw.githubusercontent.com/davidpythonseo/web3blog/main/content/post/images/toc.png)
 
-## xxxx
+## :diamonds: xxxx
 
 ![](https://raw.githubusercontent.com/davidpythonseo/web3blog/main/content/post/images/ahref-test.png)
