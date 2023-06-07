@@ -1,0 +1,4 @@
+baseURL = 'https://davidpythonseo.github.io/web3blog/'
+languageCode = 'en-us'
+title = 'Web3 撸毛日记'
+theme = 'PaperMod'
