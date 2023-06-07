@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://davidpythonseo.github.io/web3blog/sitemap.xml
