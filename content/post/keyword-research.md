@@ -33,3 +33,7 @@ TocOpen: true
 
 
 ![](https://raw.githubusercontent.com/davidpythonseo/web3blog/main/content/post/images/ahref-test.png)
+
+## youtube视频
+
+{{ youtube _QSr2_pxIJs}}
