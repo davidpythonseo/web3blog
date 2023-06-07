@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Web3 撸毛日记</title>
+    <link>https://davidpythonseo.github.io/web3blog/</link>
+    <description>Recent content on Web3 撸毛日记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Jun 2023 11:23:20 +0800</lastBuildDate><atom:link href="https://davidpythonseo.github.io/web3blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>工作计划</title>
+      <link>https://davidpythonseo.github.io/web3blog/post/1/</link>
+      <pubDate>Wed, 07 Jun 2023 11:23:20 +0800</pubDate>
+      
+      <guid>https://davidpythonseo.github.io/web3blog/post/1/</guid>
+      <description>工作计划 </description>
+    </item>
+    
+  </channel>
+</rss>
