@@ -7,7 +7,75 @@ TocOpen: true
 ---
 ## Github 热点 趋势
 
-![](https://raw.githubusercontent.com/davidpythonseo/web3blog/main/content/post/images/trending.png)
+> ![](https://raw.githubusercontent.com/davidpythonseo/web3blog/main/content/post/images/trending.png)
+
+## Fork && Clone 项目
+
+```bash
+david@Davids-Mac-mini Desktop % git clone git@github.com:davidpythonseo/prompt-engineering-for-developers.git
+Cloning into 'prompt-engineering-for-developers'...
+remote: Enumerating objects: 552, done.
+remote: Counting objects: 100% (117/117), done.
+remote: Compressing objects: 100% (59/59), done.
+remote: Total 552 (delta 62), reused 86 (delta 58), pack-reused 435
+Receiving objects: 100% (552/552), 3.54 MiB | 864.00 KiB/s, done.
+Resolving deltas: 100% (315/315), done.
+david@Davids-Mac-mini Desktop % cd prompt-engineering-for-developers 
+david@Davids-Mac-mini prompt-engineering-for-developers % tree
+.
+├── README.md
+├── content
+│   ├── Building Systems with the ChatGPT API
+│   │   ├── 1.Introduction.md
+│   │   ├── 10.Evaluation-part2.ipynb
+│   │   ├── 11.conclusion.md
+│   │   ├── 2.Language Models, the Chat Format and Tokens.ipynb
+│   │   ├── 3.Classification.ipynb
+│   │   ├── 4.Moderation.ipynb
+│   │   ├── 5.Chain of Thought Reasoning.ipynb
+│   │   ├── 6.Chaining Prompts.ipynb
+│   │   ├── 7.Check Outputs.ipynb
+│   │   ├── 8.Evaluation.ipynb
+│   │   ├── 9.Evaluation-part1.ipynb
+│   │   ├── products.json
+│   │   ├── readme.md
+│   │   ├── utils_en.py
+│   │   └── utils_zh.py
+│   ├── LangChain for LLM Application Development
+│   │   ├── 1.开篇介绍.md
+│   │   ├── 2.模型、提示和解析器.ipynb
+│   │   ├── 3.存储 .ipynb
+│   │   ├── 4.模型链.ipynb
+│   │   ├── 5.文档问答.ipynb
+│   │   ├── 6.评估.ipynb
+│   │   ├── 7.代理.ipynb
+│   │   ├── 8.课程总结.md
+│   │   ├── Data.csv
+│   │   ├── OutdoorClothingCatalog_1000.csv
+│   │   └── readme.md
+│   ├── Prompt Engineering
+│   │   ├── 1. 简介.md
+│   │   ├── 2. 提示原则 Guidelines.ipynb
+│   │   ├── 3. 迭代优化 Iterative.ipynb
+│   │   ├── 4. 文本概括 Summarizing.ipynb
+│   │   ├── 5. 推断 Inferring.ipynb
+│   │   ├── 6. 文本转换 Transforming.ipynb
+│   │   ├── 7. 文本扩展 Expanding.ipynb
+│   │   ├── 8. 聊天机器人 Chatbot.ipynb
+│   │   ├── 9. 总结.md
+│   │   ├── readme.md
+│   │   └── 附1-使用ChatGLM进行学习.ipynb
+│   └── readme.md
+└── figures
+    ├── moderation-api.png
+    ├── prompt-injection.png
+    ├── qrcode.jpeg
+    ├── readme.jpeg
+    ├── readme.md
+    └── readme_english.png
+
+6 directories, 45 files
+```
 
 ## 项目简介
 
@@ -15,49 +83,49 @@ TocOpen: true
 
 一、吴恩达《ChatGPT Prompt Engineering for Developers》课程中文版，主要内容为指导开发者如何构建 Prompt 并基于 OpenAI API 构建新的、基于 LLM 的应用，包括：
 
-    · 书写 Prompt 的原则;
+· 书写 Prompt 的原则;
 
-    · 文本总结（如总结用户评论）；
+· 文本总结（如总结用户评论）；
 
-    · 文本推断（如情感分类、主题提取）；
+· 文本推断（如情感分类、主题提取）；
 
-    · 文本转换（如翻译、自动纠错）；
+· 文本转换（如翻译、自动纠错）；
 
-    · 扩展（如书写邮件）;
+· 扩展（如书写邮件）;
 
 二、吴恩达《Building Systems with the ChatGPT API》课程中文版，主要内容为在 Prompt Engineering 课程的基础上，指导开发者如何基于 ChatGPT 提供的 API 开发一个完整的、全面的智能问答系统，包括：
 
-    · 使用大语言模型的基本规范；
-    
-    · 通过分类与监督评估输入；
-    
-    · 通过思维链推理及链式提示处理输入；
-    
-    · 检查并评估系统输出；
-    
+· 使用大语言模型的基本规范；
+
+· 通过分类与监督评估输入；
+
+· 通过思维链推理及链式提示处理输入；
+
+· 检查并评估系统输出；
+
 三、吴恩达《LangChain for LLM Application Development》课程中文版，主要内容为指导开发者如何结合工具 LangChain 使用 ChatGPT API 来搭建基于 LLM 的应用程序，包括：
 
-    · 模型、提示和解析器；
-    
-    · 应用程序所需要用到的存储；
-    
-    · 搭建模型链；
-    
-    · 基于文档的问答系统；
-    
-    · 评估与代理；
+· 模型、提示和解析器；
+
+· 应用程序所需要用到的存储；
+
+· 搭建模型链；
+
+· 基于文档的问答系统；
+
+· 评估与代理；
 
 四、（制作中）进阶的 Prompt 高级技巧，包括：
 
-    · 上下文学习;
+· 上下文学习;
 
-    · 思维链;
+· 思维链;
 
-    · Prompt 模板;
+· Prompt 模板;
 
-    · 对抗性提示;
+· 对抗性提示;
 
-    · 自动 Prompt 工程;
+· 自动 Prompt 工程;
 
 **英文原版地址：[吴恩达关于大模型的系列课程](https://learn.deeplearning.ai)**
 
@@ -95,13 +163,13 @@ LLM 正在逐步改变人们的生活，而对于开发者，如何基于 LLM �
 8. 聊天机器人 Chatbot @长琴
 9. 总结 @长琴
 
-  附1 使用 ChatGLM 进行学习 @宋志学
-  
- ### 二、搭建基于 ChatGPT 的问答系统
- 
- 注：吴恩达《Building Systems with the ChatGPT API》课程中文版
- 
- **目录：**
+附1 使用 ChatGLM 进行学习 @宋志学
+
+### 二、搭建基于 ChatGPT 的问答系统
+
+注：吴恩达《Building Systems with the ChatGPT API》课程中文版
+
+**目录：**
 
 1. 简介 Introduction @Sarai
 2. 模型，范式和 token Language Models, the Chat Format and Tokens @仲泰
@@ -114,12 +182,12 @@ LLM 正在逐步改变人们的生活，而对于开发者，如何基于 LLM �
 9. 评估（简单问答）Evaluation-part1 @陈志宏、邹雨衡
 10. 评估（复杂问答）Evaluation-part2 @邹雨衡
 11. 总结 Conclusion @Sarai
-  
- ### 三、使用 LangChain 开发应用程序
- 
- 注：吴恩达《LangChain for LLM Application Development》课程中文版
- 
- **目录：**
+
+### 三、使用 LangChain 开发应用程序
+
+注：吴恩达《LangChain for LLM Application Development》课程中文版
+
+**目录：**
 
 1. 简介 Introduction @Sarai
 2. 模型，提示和解析器 Models, Prompts and Output Parsers @Joye
@@ -129,7 +197,7 @@ LLM 正在逐步改变人们的生活，而对于开发者，如何基于 LLM �
 6. 评估 Evaluation @苟晓攀
 7. 代理 Agent @Joye
 8. 总结 Conclusion @Sarai
-  
+
 ### 四、Prompt 高级技巧（暂未完成）
 
 **目录：**
@@ -172,7 +240,7 @@ LLM 正在逐步改变人们的生活，而对于开发者，如何基于 LLM �
 4. 特别感谢以下为教程做出贡献的同学！
 
 <a href="https://github.com/datawhalechina/prompt-engineering-for-developers/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=datawhalechina/prompt-engineering-for-developers" />
+<img src="https://contrib.rocks/image?repo=datawhalechina/prompt-engineering-for-developers" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
