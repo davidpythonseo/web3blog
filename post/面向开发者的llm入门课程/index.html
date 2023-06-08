@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>面向开发者的LLM入门课程 | Web3 撸毛日记</title>
+<meta name="keywords" content="">
+<meta name="description" content="Github 热点 趋势 项目简介 一个中文版的大模型入门教程，围绕吴恩达老师的大模型系列课程展开，主要包括：
+一、吴恩达《ChatGPT Prompt Engineering for Developers》课程中文版，主要内容为指导开发者如何构建 Prompt 并基于 OpenAI API 构建新的、基于 LLM 的应用，包括：
+· 书写 Prompt 的原则; · 文本总结（如总结用户评论）； · 文本推断（如情感分类、主题提取）； · 文本转换（如翻译、自动纠错）； · 扩展（如书写邮件）; 二、吴恩达《Building Systems with the ChatGPT API》课程中文版，主要内容为在 Prompt Engineering 课程的基础上，指导开发者如何基于 ChatGPT 提供的 API 开发一个完整的、全面的智能问答系统，包括：
+· 使用大语言模型的基本规范； · 通过分类与监督评估输入； · 通过思维链推理及链式提示处理输入； · 检查并评估系统输出； 三、吴恩达《LangChain for LLM Application Development》课程中文版，主要内容为指导开发者如何结合工具 LangChain 使用 ChatGPT API 来搭建基于 LLM 的应用程序，包括：
+· 模型、提示和解析器； · 应用程序所需要用到的存储； · 搭建模型链； · 基于文档的问答系统； · 评估与代理； 四、（制作中）进阶的 Prompt 高级技巧，包括：">
+<meta name="author" content="">
+<link rel="canonical" href="https://davidpythonseo.github.io/web3blog/post/%E9%9D%A2%E5%90%91%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84llm%E5%85%A5%E9%97%A8%E8%AF%BE%E7%A8%8B/">
+<link crossorigin="anonymous" href="/web3blog/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/web3blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://davidpythonseo.github.io/web3blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://davidpythonseo.github.io/web3blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://davidpythonseo.github.io/web3blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://davidpythonseo.github.io/web3blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://davidpythonseo.github.io/web3blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="面向开发者的LLM入门课程" />
+<meta property="og:description" content="Github 热点 趋势 项目简介 一个中文版的大模型入门教程，围绕吴恩达老师的大模型系列课程展开，主要包括：
+一、吴恩达《ChatGPT Prompt Engineering for Developers》课程中文版，主要内容为指导开发者如何构建 Prompt 并基于 OpenAI API 构建新的、基于 LLM 的应用，包括：
+· 书写 Prompt 的原则; · 文本总结（如总结用户评论）； · 文本推断（如情感分类、主题提取）； · 文本转换（如翻译、自动纠错）； · 扩展（如书写邮件）; 二、吴恩达《Building Systems with the ChatGPT API》课程中文版，主要内容为在 Prompt Engineering 课程的基础上，指导开发者如何基于 ChatGPT 提供的 API 开发一个完整的、全面的智能问答系统，包括：
+· 使用大语言模型的基本规范； · 通过分类与监督评估输入； · 通过思维链推理及链式提示处理输入； · 检查并评估系统输出； 三、吴恩达《LangChain for LLM Application Development》课程中文版，主要内容为指导开发者如何结合工具 LangChain 使用 ChatGPT API 来搭建基于 LLM 的应用程序，包括：
+· 模型、提示和解析器； · 应用程序所需要用到的存储； · 搭建模型链； · 基于文档的问答系统； · 评估与代理； 四、（制作中）进阶的 Prompt 高级技巧，包括：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://davidpythonseo.github.io/web3blog/post/%E9%9D%A2%E5%90%91%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84llm%E5%85%A5%E9%97%A8%E8%AF%BE%E7%A8%8B/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-06-08T22:02:15+08:00" />
+<meta property="article:modified_time" content="2023-06-08T22:02:15+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="面向开发者的LLM入门课程"/>
+<meta name="twitter:description" content="Github 热点 趋势 项目简介 一个中文版的大模型入门教程，围绕吴恩达老师的大模型系列课程展开，主要包括：
+一、吴恩达《ChatGPT Prompt Engineering for Developers》课程中文版，主要内容为指导开发者如何构建 Prompt 并基于 OpenAI API 构建新的、基于 LLM 的应用，包括：
+· 书写 Prompt 的原则; · 文本总结（如总结用户评论）； · 文本推断（如情感分类、主题提取）； · 文本转换（如翻译、自动纠错）； · 扩展（如书写邮件）; 二、吴恩达《Building Systems with the ChatGPT API》课程中文版，主要内容为在 Prompt Engineering 课程的基础上，指导开发者如何基于 ChatGPT 提供的 API 开发一个完整的、全面的智能问答系统，包括：
+· 使用大语言模型的基本规范； · 通过分类与监督评估输入； · 通过思维链推理及链式提示处理输入； · 检查并评估系统输出； 三、吴恩达《LangChain for LLM Application Development》课程中文版，主要内容为指导开发者如何结合工具 LangChain 使用 ChatGPT API 来搭建基于 LLM 的应用程序，包括：
+· 模型、提示和解析器； · 应用程序所需要用到的存储； · 搭建模型链； · 基于文档的问答系统； · 评估与代理； 四、（制作中）进阶的 Prompt 高级技巧，包括："/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://davidpythonseo.github.io/web3blog/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "面向开发者的LLM入门课程",
+      "item": "https://davidpythonseo.github.io/web3blog/post/%E9%9D%A2%E5%90%91%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84llm%E5%85%A5%E9%97%A8%E8%AF%BE%E7%A8%8B/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "面向开发者的LLM入门课程",
+  "name": "面向开发者的LLM入门课程",
+  "description": "Github 热点 趋势 项目简介 一个中文版的大模型入门教程，围绕吴恩达老师的大模型系列课程展开，主要包括：\n一、吴恩达《ChatGPT Prompt Engineering for Developers》课程中文版，主要内容为指导开发者如何构建 Prompt 并基于 OpenAI API 构建新的、基于 LLM 的应用，包括：\n· 书写 Prompt 的原则; · 文本总结（如总结用户评论）； · 文本推断（如情感分类、主题提取）； · 文本转换（如翻译、自动纠错）； · 扩展（如书写邮件）; 二、吴恩达《Building Systems with the ChatGPT API》课程中文版，主要内容为在 Prompt Engineering 课程的基础上，指导开发者如何基于 ChatGPT 提供的 API 开发一个完整的、全面的智能问答系统，包括：\n· 使用大语言模型的基本规范； · 通过分类与监督评估输入； · 通过思维链推理及链式提示处理输入； · 检查并评估系统输出； 三、吴恩达《LangChain for LLM Application Development》课程中文版，主要内容为指导开发者如何结合工具 LangChain 使用 ChatGPT API 来搭建基于 LLM 的应用程序，包括：\n· 模型、提示和解析器； · 应用程序所需要用到的存储； · 搭建模型链； · 基于文档的问答系统； · 评估与代理； 四、（制作中）进阶的 Prompt 高级技巧，包括：",
+  "keywords": [
+    
+  ],
+  "articleBody": "Github 热点 趋势 项目简介 一个中文版的大模型入门教程，围绕吴恩达老师的大模型系列课程展开，主要包括：\n一、吴恩达《ChatGPT Prompt Engineering for Developers》课程中文版，主要内容为指导开发者如何构建 Prompt 并基于 OpenAI API 构建新的、基于 LLM 的应用，包括：\n· 书写 Prompt 的原则; · 文本总结（如总结用户评论）； · 文本推断（如情感分类、主题提取）； · 文本转换（如翻译、自动纠错）； · 扩展（如书写邮件）; 二、吴恩达《Building Systems with the ChatGPT API》课程中文版，主要内容为在 Prompt Engineering 课程的基础上，指导开发者如何基于 ChatGPT 提供的 API 开发一个完整的、全面的智能问答系统，包括：\n· 使用大语言模型的基本规范； · 通过分类与监督评估输入； · 通过思维链推理及链式提示处理输入； · 检查并评估系统输出； 三、吴恩达《LangChain for LLM Application Development》课程中文版，主要内容为指导开发者如何结合工具 LangChain 使用 ChatGPT API 来搭建基于 LLM 的应用程序，包括：\n· 模型、提示和解析器； · 应用程序所需要用到的存储； · 搭建模型链； · 基于文档的问答系统； · 评估与代理； 四、（制作中）进阶的 Prompt 高级技巧，包括：\n· 上下文学习; · 思维链; · Prompt 模板; · 对抗性提示; · 自动 Prompt 工程; 英文原版地址：吴恩达关于大模型的系列课程\n双语字幕视频地址：吴恩达 x OpenAI的Prompt Engineering课程专业翻译版\n中英双语字幕下载：《ChatGPT提示工程》非官方版中英双语字幕\n项目意义 LLM 正在逐步改变人们的生活，而对于开发者，如何基于 LLM 提供的 API 快速、便捷地开发一些具备更强能力、集成LLM 的应用，来便捷地实现一些更新颖、更实用的能力，是一个急需学习的重要能力。由吴恩达老师与 OpenAI 合作推出的大模型系列教程，包括 、等教程，其中，《ChatGPT Prompt Engineering for Developers》教程面向入门 LLM 的开发者，深入浅出地介绍了对于开发者，如何构造 Prompt 并基于 OpenAI 提供的 API 实现包括总结、推断、转换等多种常用功能，是入门 LLM 开发的经典教程；《Building Systems with the ChatGPT API》、《LangChain for LLM Application Development》教程面向想要基于 LLM 开发应用程序的开发者，简洁有效而又系统全面地介绍了如何基于 LangChain 与 ChatGPT API 开发具备实用功能的应用程序，适用于开发者学习以开启基于 LLM 实际搭建应用程序之路。因此，我们将该系列课程翻译为中文，并复现其范例代码，也为其中一个视频增加了中文字幕，支持国内中文学习者直接使用，以帮助中文学习者更好地学习 LLM 开发；我们也同时实现了效果大致相当的中文 Prompt，支持学习者感受中文语境下 LLM 的学习使用。未来，我们也将加入更多 Prompt 高级技巧，以丰富本课程内容，帮助开发者掌握更多、更巧妙的 Prompt 技能。\n项目受众 适用于所有具备基础 Python 能力，想要入门 LLM 的开发者。\n项目亮点 《ChatGPT Prompt Engineering for Developers》、《Building Systems with the ChatGPT API》、《LangChain for LLM Application Development》等教程作为由吴恩达老师与 OpenAI 联合推出的官方教程，在可预见的未来会成为 LLM 的重要入门教程，但是目前还只支持英文版且国内访问受限，打造中文版且国内流畅访问的教程具有重要意义；同时，GPT 对中文、英文具有不同的理解能力，本教程在多次对比、实验之后确定了效果大致相当的中文 Prompt，支持学习者研究如何提升 ChatGPT 在中文语境下的理解与生成能力。\n内容大纲 一、面向开发者的 Prompt Engineering 注：吴恩达《ChatGPT Prompt Engineering for Developers》课程中文版\n目录：\n简介 Introduction @邹雨衡 Prompt 的构建原则 Guidelines @邹雨衡 如何迭代优化 Prompt Itrative @邹雨衡 文本总结 Summarizing @玉琳 文本推断 Inferring @长琴 文本转换 Transforming @玉琳 文本扩展 Expanding @邹雨衡 聊天机器人 Chatbot @长琴 总结 @长琴 附1 使用 ChatGLM 进行学习 @宋志学\n二、搭建基于 ChatGPT 的问答系统 注：吴恩达《Building Systems with the ChatGPT API》课程中文版\n目录：\n简介 Introduction @Sarai 模型，范式和 token Language Models, the Chat Format and Tokens @仲泰 检查输入-分类 Classification @诸世纪 检查输入-监督 Moderation @诸世纪 思维链推理 Chain of Thought Reasoning @万礼行 提示链 Chaining Prompts @万礼行 检查输入 Check Outputs @仲泰 评估（端到端系统）Evaluation @邹雨衡 评估（简单问答）Evaluation-part1 @陈志宏、邹雨衡 评估（复杂问答）Evaluation-part2 @邹雨衡 总结 Conclusion @Sarai 三、使用 LangChain 开发应用程序 注：吴恩达《LangChain for LLM Application Development》课程中文版\n目录：\n简介 Introduction @Sarai 模型，提示和解析器 Models, Prompts and Output Parsers @Joye 存储 Memory @徐虎 模型链 Chains @徐虎 基于文档的问答 Question and Answer @苟晓攀 评估 Evaluation @苟晓攀 代理 Agent @Joye 总结 Conclusion @Sarai 四、Prompt 高级技巧（暂未完成） 目录：\n上下文学习 In-context Learning @Noah 思维链 Chain of Thought @玉琳 Prompt 模板 Template @万礼行 Prompt 集成 Ensembling @杨同学 自我一致性 Self-consistency @朱宏民 对抗性提示 Adversarial Prompting @周辉池 可靠性 Reliability @成剑 自动 Prompt 工程 Automatic Prompt Engineer @邹雨衡 配套视频 双语字幕视频：吴恩达 x OpenAI的Prompt Engineering课程专业翻译版 @万礼行\n致谢 核心贡献者\n邹雨衡-项目负责人（对外经济贸易大学研究生） 长琴（内容创作者-Datawhale成员-AI算法工程师） 玉琳（内容创作者-Datawhale成员） 万礼行（内容创作者-视频翻译者） 仲泰（内容创作者） 魂兮（内容创作者-前端工程师） 徐虎（内容创作者） Joye（内容创作者-数据科学家） 诸世纪（内容创作者-算法工程师） 宋志学（内容创作者-Datawhale成员） Sarai（内容创作者-AI应用爱好者） 陈志宏（内容创作者） 其他\n特别感谢 @Sm1les、@LSGOMYP 对本项目的帮助与支持； 感谢 GithubDaily 提供的双语字幕； 如果有任何想法可以联系我们 DataWhale 也欢迎大家多多提出 issue； 特别感谢以下为教程做出贡献的同学！ Made with contrib.rocks.\n关注我们 Datawhale 是一个专注于数据科学与 AI 领域的开源组织，汇集了众多领域院校和知名企业的优秀学习者，聚合了一群有开源精神和探索精神的团队成员。微信搜索公众号Datawhale可以加入我们。\nLICENSE 本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可。\n",
+  "wordCount" : "390",
+  "inLanguage": "en",
+  "datePublished": "2023-06-08T22:02:15+08:00",
+  "dateModified": "2023-06-08T22:02:15+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://davidpythonseo.github.io/web3blog/post/%E9%9D%A2%E5%90%91%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84llm%E5%85%A5%E9%97%A8%E8%AF%BE%E7%A8%8B/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Web3 撸毛日记",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://davidpythonseo.github.io/web3blog/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://davidpythonseo.github.io/web3blog/" accesskey="h" title="Web3 撸毛日记 (Alt + H)">Web3 撸毛日记</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      面向开发者的LLM入门课程
+    </h1>
+    <div class="post-meta"><span title='2023-06-08 22:02:15 +0800 +0800'>June 8, 2023</span>
+
+</div>
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#github-%e7%83%ad%e7%82%b9-%e8%b6%8b%e5%8a%bf" aria-label="Github 热点 趋势">Github 热点 趋势</a></li>
+                <li>
+                    <a href="#%e9%a1%b9%e7%9b%ae%e7%ae%80%e4%bb%8b" aria-label="项目简介">项目简介</a></li>
+                <li>
+                    <a href="#%e9%a1%b9%e7%9b%ae%e6%84%8f%e4%b9%89" aria-label="项目意义">项目意义</a></li>
+                <li>
+                    <a href="#%e9%a1%b9%e7%9b%ae%e5%8f%97%e4%bc%97" aria-label="项目受众">项目受众</a></li>
+                <li>
+                    <a href="#%e9%a1%b9%e7%9b%ae%e4%ba%ae%e7%82%b9" aria-label="项目亮点">项目亮点</a></li>
+                <li>
+                    <a href="#%e5%86%85%e5%ae%b9%e5%a4%a7%e7%ba%b2" aria-label="内容大纲">内容大纲</a><ul>
+                        
+                <li>
+                    <a href="#%e4%b8%80%e9%9d%a2%e5%90%91%e5%bc%80%e5%8f%91%e8%80%85%e7%9a%84-prompt-engineering" aria-label="一、面向开发者的 Prompt Engineering">一、面向开发者的 Prompt Engineering</a></li>
+                <li>
+                    <a href="#%e4%ba%8c%e6%90%ad%e5%bb%ba%e5%9f%ba%e4%ba%8e-chatgpt-%e7%9a%84%e9%97%ae%e7%ad%94%e7%b3%bb%e7%bb%9f" aria-label="二、搭建基于 ChatGPT 的问答系统">二、搭建基于 ChatGPT 的问答系统</a></li>
+                <li>
+                    <a href="#%e4%b8%89%e4%bd%bf%e7%94%a8-langchain-%e5%bc%80%e5%8f%91%e5%ba%94%e7%94%a8%e7%a8%8b%e5%ba%8f" aria-label="三、使用 LangChain 开发应用程序">三、使用 LangChain 开发应用程序</a></li>
+                <li>
+                    <a href="#%e5%9b%9bprompt-%e9%ab%98%e7%ba%a7%e6%8a%80%e5%b7%a7%e6%9a%82%e6%9c%aa%e5%ae%8c%e6%88%90" aria-label="四、Prompt 高级技巧（暂未完成）">四、Prompt 高级技巧（暂未完成）</a></li>
+                <li>
+                    <a href="#%e9%85%8d%e5%a5%97%e8%a7%86%e9%a2%91" aria-label="配套视频">配套视频</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e8%87%b4%e8%b0%a2" aria-label="致谢">致谢</a></li>
+                <li>
+                    <a href="#%e5%85%b3%e6%b3%a8%e6%88%91%e4%bb%ac" aria-label="关注我们">关注我们</a></li>
+                <li>
+                    <a href="#license" aria-label="LICENSE">LICENSE</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="github-热点-趋势">Github 热点 趋势<a hidden class="anchor" aria-hidden="true" href="#github-热点-趋势">#</a></h2>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/davidpythonseo/web3blog/main/content/post/images/trending.png" alt=""  />
+</p>
+<h2 id="项目简介">项目简介<a hidden class="anchor" aria-hidden="true" href="#项目简介">#</a></h2>
+<p>一个中文版的大模型入门教程，围绕吴恩达老师的大模型系列课程展开，主要包括：</p>
+<p>一、吴恩达《ChatGPT Prompt Engineering for Developers》课程中文版，主要内容为指导开发者如何构建 Prompt 并基于 OpenAI API 构建新的、基于 LLM 的应用，包括：</p>
+<pre><code>· 书写 Prompt 的原则;
+
+· 文本总结（如总结用户评论）；
+
+· 文本推断（如情感分类、主题提取）；
+
+· 文本转换（如翻译、自动纠错）；
+
+· 扩展（如书写邮件）;
+</code></pre>
+<p>二、吴恩达《Building Systems with the ChatGPT API》课程中文版，主要内容为在 Prompt Engineering 课程的基础上，指导开发者如何基于 ChatGPT 提供的 API 开发一个完整的、全面的智能问答系统，包括：</p>
+<pre><code>· 使用大语言模型的基本规范；
+
+· 通过分类与监督评估输入；
+
+· 通过思维链推理及链式提示处理输入；
+
+· 检查并评估系统输出；
+</code></pre>
+<p>三、吴恩达《LangChain for LLM Application Development》课程中文版，主要内容为指导开发者如何结合工具 LangChain 使用 ChatGPT API 来搭建基于 LLM 的应用程序，包括：</p>
+<pre><code>· 模型、提示和解析器；
+
+· 应用程序所需要用到的存储；
+
+· 搭建模型链；
+
+· 基于文档的问答系统；
+
+· 评估与代理；
+</code></pre>
+<p>四、（制作中）进阶的 Prompt 高级技巧，包括：</p>
+<pre><code>· 上下文学习;
+
+· 思维链;
+
+· Prompt 模板;
+
+· 对抗性提示;
+
+· 自动 Prompt 工程;
+</code></pre>
+<p><strong>英文原版地址：<a href="https://learn.deeplearning.ai">吴恩达关于大模型的系列课程</a></strong></p>
+<p><strong>双语字幕视频地址：<a href="https://www.bilibili.com/video/BV1Bo4y1A7FU/?share_source=copy_web">吴恩达 x OpenAI的Prompt Engineering课程专业翻译版</a></strong></p>
+<p><strong>中英双语字幕下载：<a href="https://github.com/GitHubDaily/ChatGPT-Prompt-Engineering-for-Developers-in-Chinese">《ChatGPT提示工程》非官方版中英双语字幕</a></strong></p>
+<h2 id="项目意义">项目意义<a hidden class="anchor" aria-hidden="true" href="#项目意义">#</a></h2>
+<p>LLM 正在逐步改变人们的生活，而对于开发者，如何基于 LLM 提供的 API 快速、便捷地开发一些具备更强能力、集成LLM 的应用，来便捷地实现一些更新颖、更实用的能力，是一个急需学习的重要能力。由吴恩达老师与 OpenAI 合作推出的大模型系列教程，包括 、等教程，其中，《ChatGPT Prompt Engineering for Developers》教程面向入门 LLM 的开发者，深入浅出地介绍了对于开发者，如何构造 Prompt 并基于 OpenAI 提供的 API 实现包括总结、推断、转换等多种常用功能，是入门 LLM 开发的经典教程；《Building Systems with the ChatGPT API》、《LangChain for LLM Application Development》教程面向想要基于 LLM 开发应用程序的开发者，简洁有效而又系统全面地介绍了如何基于 LangChain 与 ChatGPT API 开发具备实用功能的应用程序，适用于开发者学习以开启基于 LLM 实际搭建应用程序之路。因此，我们将该系列课程翻译为中文，并复现其范例代码，也为其中一个视频增加了中文字幕，支持国内中文学习者直接使用，以帮助中文学习者更好地学习 LLM 开发；我们也同时实现了效果大致相当的中文 Prompt，支持学习者感受中文语境下 LLM 的学习使用。未来，我们也将加入更多 Prompt 高级技巧，以丰富本课程内容，帮助开发者掌握更多、更巧妙的 Prompt 技能。</p>
+<h2 id="项目受众">项目受众<a hidden class="anchor" aria-hidden="true" href="#项目受众">#</a></h2>
+<p>适用于所有具备基础 Python 能力，想要入门 LLM 的开发者。</p>
+<h2 id="项目亮点">项目亮点<a hidden class="anchor" aria-hidden="true" href="#项目亮点">#</a></h2>
+<p>《ChatGPT Prompt Engineering for Developers》、《Building Systems with the ChatGPT API》、《LangChain for LLM Application Development》等教程作为由吴恩达老师与 OpenAI 联合推出的官方教程，在可预见的未来会成为 LLM 的重要入门教程，但是目前还只支持英文版且国内访问受限，打造中文版且国内流畅访问的教程具有重要意义；同时，GPT 对中文、英文具有不同的理解能力，本教程在多次对比、实验之后确定了效果大致相当的中文 Prompt，支持学习者研究如何提升 ChatGPT 在中文语境下的理解与生成能力。</p>
+<h2 id="内容大纲">内容大纲<a hidden class="anchor" aria-hidden="true" href="#内容大纲">#</a></h2>
+<h3 id="一面向开发者的-prompt-engineering">一、面向开发者的 Prompt Engineering<a hidden class="anchor" aria-hidden="true" href="#一面向开发者的-prompt-engineering">#</a></h3>
+<p>注：吴恩达《ChatGPT Prompt Engineering for Developers》课程中文版</p>
+<p><strong>目录：</strong></p>
+<ol>
+<li>简介 Introduction @邹雨衡</li>
+<li>Prompt 的构建原则 Guidelines @邹雨衡</li>
+<li>如何迭代优化 Prompt Itrative @邹雨衡</li>
+<li>文本总结 Summarizing @玉琳</li>
+<li>文本推断 Inferring @长琴</li>
+<li>文本转换 Transforming @玉琳</li>
+<li>文本扩展 Expanding @邹雨衡</li>
+<li>聊天机器人 Chatbot @长琴</li>
+<li>总结 @长琴</li>
+</ol>
+<p>附1 使用 ChatGLM 进行学习 @宋志学</p>
+<h3 id="二搭建基于-chatgpt-的问答系统">二、搭建基于 ChatGPT 的问答系统<a hidden class="anchor" aria-hidden="true" href="#二搭建基于-chatgpt-的问答系统">#</a></h3>
+<p>注：吴恩达《Building Systems with the ChatGPT API》课程中文版</p>
+<p><strong>目录：</strong></p>
+<ol>
+<li>简介 Introduction @Sarai</li>
+<li>模型，范式和 token Language Models, the Chat Format and Tokens @仲泰</li>
+<li>检查输入-分类 Classification @诸世纪</li>
+<li>检查输入-监督 Moderation @诸世纪</li>
+<li>思维链推理 Chain of Thought Reasoning @万礼行</li>
+<li>提示链 Chaining Prompts @万礼行</li>
+<li>检查输入 Check Outputs @仲泰</li>
+<li>评估（端到端系统）Evaluation @邹雨衡</li>
+<li>评估（简单问答）Evaluation-part1 @陈志宏、邹雨衡</li>
+<li>评估（复杂问答）Evaluation-part2 @邹雨衡</li>
+<li>总结 Conclusion @Sarai</li>
+</ol>
+<h3 id="三使用-langchain-开发应用程序">三、使用 LangChain 开发应用程序<a hidden class="anchor" aria-hidden="true" href="#三使用-langchain-开发应用程序">#</a></h3>
+<p>注：吴恩达《LangChain for LLM Application Development》课程中文版</p>
+<p><strong>目录：</strong></p>
+<ol>
+<li>简介 Introduction @Sarai</li>
+<li>模型，提示和解析器 Models, Prompts and Output Parsers @Joye</li>
+<li>存储 Memory @徐虎</li>
+<li>模型链 Chains @徐虎</li>
+<li>基于文档的问答 Question and Answer @苟晓攀</li>
+<li>评估 Evaluation @苟晓攀</li>
+<li>代理 Agent @Joye</li>
+<li>总结 Conclusion @Sarai</li>
+</ol>
+<h3 id="四prompt-高级技巧暂未完成">四、Prompt 高级技巧（暂未完成）<a hidden class="anchor" aria-hidden="true" href="#四prompt-高级技巧暂未完成">#</a></h3>
+<p><strong>目录：</strong></p>
+<ol>
+<li>上下文学习 In-context Learning @Noah</li>
+<li>思维链 Chain of Thought @玉琳</li>
+<li>Prompt 模板 Template @万礼行</li>
+<li>Prompt 集成 Ensembling @杨同学</li>
+<li>自我一致性 Self-consistency @朱宏民</li>
+<li>对抗性提示 Adversarial Prompting @周辉池</li>
+<li>可靠性 Reliability @成剑</li>
+<li>自动 Prompt 工程 Automatic Prompt Engineer @邹雨衡</li>
+</ol>
+<h3 id="配套视频">配套视频<a hidden class="anchor" aria-hidden="true" href="#配套视频">#</a></h3>
+<p>双语字幕视频：<a href="https://www.bilibili.com/video/BV1Bo4y1A7FU/?share_source=copy_web">吴恩达 x OpenAI的Prompt Engineering课程专业翻译版</a> @万礼行</p>
+<h2 id="致谢">致谢<a hidden class="anchor" aria-hidden="true" href="#致谢">#</a></h2>
+<p><strong>核心贡献者</strong></p>
+<ul>
+<li><a href="https://github.com/nowadays0421">邹雨衡-项目负责人</a>（对外经济贸易大学研究生）</li>
+<li><a href="https://yam.gift/">长琴</a>（内容创作者-Datawhale成员-AI算法工程师）</li>
+<li><a href="https://github.com/Sophia-Huang">玉琳</a>（内容创作者-Datawhale成员）</li>
+<li><a href="https://github.com/leason-wan">万礼行</a>（内容创作者-视频翻译者）</li>
+<li><a href="https://github.com/ztgg0228">仲泰</a>（内容创作者）</li>
+<li><a href="https://github.com/wisdom-pan">魂兮</a>（内容创作者-前端工程师）</li>
+<li><a href="https://github.com/xuhu0115">徐虎</a>（内容创作者）</li>
+<li><a href="https://Joyenjoye.com">Joye</a>（内容创作者-数据科学家）</li>
+<li><a href="https://github.com/very-very-very">诸世纪</a>（内容创作者-算法工程师）</li>
+<li><a href="https://github.com/KMnO4-zx">宋志学</a>（内容创作者-Datawhale成员）</li>
+<li>Sarai（内容创作者-AI应用爱好者）</li>
+<li>陈志宏（内容创作者）</li>
+</ul>
+<p><strong>其他</strong></p>
+<ol>
+<li>特别感谢 <a href="https://github.com/Sm1les">@Sm1les</a>、<a href="https://github.com/LSGOMYP">@LSGOMYP</a> 对本项目的帮助与支持；</li>
+<li>感谢 <a href="https://github.com/GitHubDaily">GithubDaily</a> 提供的双语字幕；</li>
+<li>如果有任何想法可以联系我们 DataWhale 也欢迎大家多多提出 issue；</li>
+<li>特别感谢以下为教程做出贡献的同学！</li>
+</ol>
+<!-- raw HTML omitted -->
+<p>Made with <a href="https://contrib.rocks">contrib.rocks</a>.</p>
+<h2 id="关注我们">关注我们<a hidden class="anchor" aria-hidden="true" href="#关注我们">#</a></h2>
+<p>Datawhale 是一个专注于数据科学与 AI 领域的开源组织，汇集了众多领域院校和知名企业的优秀学习者，聚合了一群有开源精神和探索精神的团队成员。微信搜索公众号Datawhale可以加入我们。</p>
+<h2 id="license">LICENSE<a hidden class="anchor" aria-hidden="true" href="#license">#</a></h2>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->本作品采用<!-- raw HTML omitted -->知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议<!-- raw HTML omitted -->进行许可。</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://davidpythonseo.github.io/web3blog/">Web3 撸毛日记</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
