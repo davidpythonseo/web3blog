@@ -44,7 +44,7 @@ TocOpen: true
 
 - 外链列表以及部署时间
 
-> 注意日期
+> 注意日期 域名购买后可以**先发外链**
 
 ![](https://raw.githubusercontent.com/davidpythonseo/web3blog/main/content/post/images/新导入.png)
 
