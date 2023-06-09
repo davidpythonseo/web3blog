@@ -8,3 +8,4 @@ TocOpen: true
 
 ## 关键词 `discord共享屏幕`
 
+## 搜索关键词：八段锦 八部金刚
