@@ -8,6 +8,10 @@ TocOpen: true
 
 ## Google 搜索 [我在p站 学习 李永乐](https://www.google.com.hk/search?q=%E6%88%91%E5%9C%A8p%E7%AB%99+%E5%AD%A6%E4%B9%A0+%E6%9D%8E%E6%B0%B8%E4%B9%90)
 
+![](https://raw.githubusercontent.com/davidpythonseo/web3blog/main/content/post/images/谷歌搜索李永乐.png)
+
+---
+
 ### 凤凰网的页面 
 
 - 留意文章配图水印微信公众号
@@ -20,7 +24,7 @@ Oct 27, 2021
 https://h5.ifeng.com/c/vivoArticle/v002lsdifm05o8oNCzORBGiQq6PvRVR3EVX1YmTajmeg4JY__
 “人们对我的视频可能不感兴趣，但他们都知道在se情网站上，有我这么个教微积分的老师。” “很多想要学数学的学生，都是通过Pornhub认识我的，其中不少 ...
 ```
-
+---
 ### 采集网站 高质量信息聚合器
 
 - https://machbbs.com/
@@ -37,7 +41,7 @@ https://h5.ifeng.com/c/vivoArticle/v002lsdifm05o8oNCzORBGiQq6PvRVR3EVX1YmTajmeg4
 https://machbbs.com/hostloc/316937
 我是个爱学习的人，听说P站有李永乐的视频，天天去学习. programer2021-1-2352. P站删了一千多个视频，李永乐老师的依然保留，可见管理员对对知识的敬畏 .
 ```
-
+---
 ### 推特号 BITWU.ETH
 
 - [etherscan.io 看看 bitwu.eth](https://etherscan.io/address/0x2ef91E77b886D379f370f927d943285547D9b37e)
@@ -55,7 +59,7 @@ Twitter
 https://twitter.com/BTW0205/status/1532928234051932160
 Jun 4, 2022 — 老吴去年在P站闲逛的时候，看到的李永乐老师的这个视频，很好的应证了《随机漫步的傻瓜》可以配合观看。 我们如何看待成功，如何用概率思维来思考
 ```
-
+---
 ### 要注意规避有害数据流
 
 - 理解信息检测的底层逻辑
@@ -66,6 +70,7 @@ Jun 4, 2022 — 老吴去年在P站闲逛的时候，看到的李永乐老师的
 
 ![](https://raw.githubusercontent.com/davidpythonseo/web3blog/main/content/post/images/规避.png)
 
+---
 ### 微信采集站
 
 - 简体转繁体微信公众号搬运
