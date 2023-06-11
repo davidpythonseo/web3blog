@@ -26,7 +26,7 @@ https://h5.ifeng.com/c/vivoArticle/v002lsdifm05o8oNCzORBGiQq6PvRVR3EVX1YmTajmeg4
 - https://machbbs.com/
 - 分析网站结构
 - 找到数据来源
-- 网站内的分期都是 web2 至今都很活跃**技术社区**
+- 网站内的分区都是web2至今都很活跃 **技术社区**
 - 结合 Hugo 怎么实现
 - 这个模式跟安装 RssHub 有什么关系
 - 动漫迷会怎么使用 RssHub
@@ -43,6 +43,10 @@ https://machbbs.com/hostloc/316937
 - [etherscan.io 看看 bitwu.eth](https://etherscan.io/address/0x2ef91E77b886D379f370f927d943285547D9b37e)
 - 初步浏览一下推特号运营细节
 - 想象一下运营以及变现的方案
+- 逛一下他 [medium](https://medium.com/@bitwu/%E6%94%B6%E5%BE%92%E8%AE%A1%E5%88%92%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E7%AC%AC%E4%BA%8C%E7%AF%87-%E6%88%91%E8%83%BD%E5%B8%A6%E7%BB%99%E4%BD%A0%E7%9A%84-%E8%BF%9C%E6%AF%94%E4%BD%A0%E6%83%B3%E8%B1%A1%E7%9A%84%E8%A6%81%E5%A4%9A%E5%BE%97%E5%A4%9A-bbfa7c46f7c9)
+
+
+![](https://raw.githubusercontent.com/davidpythonseo/web3blog/main/content/post/images/bitwu大v计划.png)
 
 
 ```bash
