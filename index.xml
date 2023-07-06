@@ -281,11 +281,7 @@ http://temp.earthsown.com/
       <description>案例链接 调取关键词对象信息 https://www.nichesitemastery.com/search/vpn%E6%8E%A8%E8%8D%90
 调取网站域名对象信息 https://www.nichesitemastery.com/site/baidu.com
 调取github项目对象信息 https://www.opensourceagenda.com/projects/vpncngithubio
-代码实现 https://juejin.cn/post/7126902611373998110
-请求参数的概念
-本地 MySQL 请求 爬虫 HTML 请求 收费 API 请求 ChatGLM 请求 缓存和写入数据
-缓存保存在内存空间中 缓存保存在硬盘txt中 缓存保存在数据库字段中 缓存保存在跨域API中 分析对象属性 使用 Python Request 函数 请求目标链接并格式化出页面MarkDown https://www.linuxcool.com/ls --- baseURL: &amp;#39;https://www.linuxcool.com/ls&amp;#39; title: &amp;#39;ls命令 – 显示目录中文件及其属性信息&amp;#39; categories: &amp;#39;文件管理&amp;#39; author: &amp;#39;linuxcool&amp;#39; tag: [&amp;#39;真正好用的Linux命令在线查询手册&amp;#39;,&amp;#39;ls&amp;#39;] --- ## 语法格式 &amp;gt; ls [参数] [文件名] ## 常用参数 |参数名|参数功能| |-----|------| |-a|显示所有文件夹| |-d|显示目录自身的属性信息| ## 参考示例 显示当前目录中的文件名（默认不含隐藏文件）： ## 与该功能相关的Linux命令： - xxx - xxx https://davidpythonseo.github.io/web3blog/
-https://github.com/davidpythonseo/web3blog/</description>
+代码实现 https://juejin.cn/post/7126902611373998110 请求参数的概念 本地 MySQL 请求 爬虫 HTML 请求 收费 API 请求 ChatGLM 请求 缓存和写入数据 缓存保存在内存空间中 缓存保存在硬盘txt中 缓存保存在数据库字段中 缓存保存在跨域API中 数据的调取效率和成本 先看内存 内存读写最快 再次硬盘 本地成本最低 最后跨域 网络信息最新 分析对象属性 使用 Python Request 函数 使用 Xpath 扣页面元素 例如://*[@id=&amp;quot;top&amp;quot;]/main 请求目标链接并格式化出页面MarkDown https://www.linuxcool.com/ls --- baseURL: &amp;#39;https://www.linuxcool.com/ls&amp;#39; title: &amp;#39;ls命令 – 显示目录中文件及其属性信息&amp;#39; categories: &amp;#39;文件管理&amp;#39; author: &amp;#39;linuxcool&amp;#39; tag: [&amp;#39;真正好用的Linux命令在线查询手册&amp;#39;,&amp;#39;ls&amp;#39;] --- ## 语法格式 &amp;gt; ls [参数] [文件名] ## 常用参数 |参数名|参数功能| |-----|------| |-a|显示所有文件夹| |-d|显示目录自身的属性信息| ## 参考示例 显示当前目录中的文件名（默认不含隐藏文件）： ## 与该功能相关的Linux命令： - xxx - xxx 返回首页 https://davidpythonseo.</description>
     </item>
     
     <item>
