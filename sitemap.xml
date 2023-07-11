@@ -2,13 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://davidpythonseo.github.io/web3blog/post/</loc>
+    <lastmod>2023-07-12T00:18:05+08:00</lastmod>
+  </url><url>
+    <loc>https://davidpythonseo.github.io/web3blog/</loc>
+    <lastmod>2023-07-12T00:18:05+08:00</lastmod>
+  </url><url>
+    <loc>https://davidpythonseo.github.io/web3blog/post/%E5%8D%97%E6%B5%B7%E4%B8%80%E5%8F%B7/</loc>
+    <lastmod>2023-07-12T00:18:05+08:00</lastmod>
+  </url><url>
     <loc>https://davidpythonseo.github.io/web3blog/blog/blender-%E8%A6%96%E9%A0%BB/</loc>
     <lastmod>2023-06-15T09:03:50+08:00</lastmod>
   </url><url>
     <loc>https://davidpythonseo.github.io/web3blog/blog/</loc>
-    <lastmod>2023-06-15T09:03:50+08:00</lastmod>
-  </url><url>
-    <loc>https://davidpythonseo.github.io/web3blog/</loc>
     <lastmod>2023-06-15T09:03:50+08:00</lastmod>
   </url><url>
     <loc>https://davidpythonseo.github.io/web3blog/blog/%E9%9A%A8%E4%BE%BF%E9%80%9B/</loc>
@@ -16,9 +22,6 @@
   </url><url>
     <loc>https://davidpythonseo.github.io/web3blog/blog/web3/</loc>
     <lastmod>2023-06-13T23:27:04+08:00</lastmod>
-  </url><url>
-    <loc>https://davidpythonseo.github.io/web3blog/post/</loc>
-    <lastmod>2023-06-12T18:48:04+08:00</lastmod>
   </url><url>
     <loc>https://davidpythonseo.github.io/web3blog/post/%E9%9B%B6%E4%BB%A3%E7%A0%81ai%E5%BA%94%E7%94%A8%E6%9E%84%E5%BB%BA%E7%A5%9E%E5%99%A8-flowise/</loc>
     <lastmod>2023-06-12T18:48:04+08:00</lastmod>
