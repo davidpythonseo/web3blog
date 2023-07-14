@@ -1,0 +1,22 @@
+this is the shortcode text 
+<br>
+{{ .Get "color" }}
+
+<p style="color: {{ .Get 0 }}">xxxx</p>
+
+
+{{ $get_google_serp := getJSON "https://serpapi.com/searches/67ca12575958b0a0/64af4cd2dc02f11e330885b3.json"}}
+
+{{ range $get_google_serp.organic_results }}
+{{ .title }} <br>
+{{ .link }} <br>
+{{ .snippet }} <br>
+<hr>
+{{ end }}
+
+
+
+古文排版 竖版编辑 MarkDown
+https://chuantongzhongwenpaiban.bmcx.com/
+https://www.aizhan.com/cha/bmcx.com/
+https://keyboard.bmcx.com/
