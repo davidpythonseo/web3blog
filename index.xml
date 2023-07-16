@@ -6,7 +6,16 @@
     <description>Recent content on Web3 撸毛日记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Jul 2023 19:29:25 +0800</lastBuildDate><atom:link href="https://davidpythonseo.github.io/web3blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Jul 2023 12:25:04 +0800</lastBuildDate><atom:link href="https://davidpythonseo.github.io/web3blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>清洗数据集</title>
+      <link>https://davidpythonseo.github.io/web3blog/post/%E6%B8%85%E6%B4%97%E6%95%B0%E6%8D%AE%E9%9B%86/</link>
+      <pubDate>Sun, 16 Jul 2023 12:25:04 +0800</pubDate>
+      
+      <guid>https://davidpythonseo.github.io/web3blog/post/%E6%B8%85%E6%B4%97%E6%95%B0%E6%8D%AE%E9%9B%86/</guid>
+      <description>如何利用 ChatGPT 的新功能 Code Interpreter 来实现视频输出 Twitter: https://twitter.com/verysmallwoods Bilibili: https://space.bilibili.com/615957867/ Email: 0001coder@gmail.com Github: https://github.com/sugarforever/ 数据集: www.kaggle.com 国家数据集: https://datahub.io/core/geo-countries 标题: ChatGPT代码解释器 - 多数据集生成视频只需5分钟【国际可再生能源发展趋势可视化】 链接: https://youtu.be/9sA-cFJ6_C0 下载字幕 Google Colab Whisper 点击下载字幕 使用 Hugo getJSON for Dynamic Data https://youtu.be/HN6EOTagV4s { &amp;#34;id&amp;#34;: 1, &amp;#34;seek&amp;#34;: 0, &amp;#34;start&amp;#34;: 2.0, &amp;#34;end&amp;#34;: 5.0, &amp;#34;text&amp;#34;: &amp;#34;\u6211\u4eec\u4ecb\u7ecd\u4e86\u5982\u4f55\u5229\u7528\u4ee3\u7801\u89e3\u91ca\u5668&amp;#34;, &amp;#34;tokens&amp;#34;: [50464, 15003, 30312, 10115, 235, 2289, 43526, 23700, 9254, 19105, 23230, 223, 17278, 5873, 232, 34386, 50614], &amp;#34;temperature&amp;#34;: 0.15, &amp;#34;avg_logprob&amp;#34;: -0.4411607658338247, &amp;#34;compression_ratio&amp;#34;: 1.</description>
+    </item>
+    
     <item>
       <title>巴拿马</title>
       <link>https://davidpythonseo.github.io/web3blog/post/%E5%B7%B4%E6%8B%BF%E9%A9%AC/</link>
