@@ -3,7 +3,7 @@ title: "中國通史"
 date: 2023-07-21T17:44:56+08:00
 draft: false
 ShowToc: true
-url: "中國通史"
+url: "history"
 TocOpen: true
 ---
 
@@ -27,7 +27,7 @@ TocOpen: true
 ---
 - [x] YouTube: https://www.youtube.com/watch?v=CTRvs6bW6CQ&list=PLOrf2h5ONlwUTW9etWK4b3xQiz8LdgkKS
 - [x] BiliBili: https://www.bilibili.com/bangumi/media/md28229010
-- [ ] Github: https://davidpythonseo.github.io/web3blog/post/中國通史/
+- [ ] Github: https://davidpythonseo.github.io/web3blog/post/history/
 ---
 ## 作業任務 - 學習筆記
 
