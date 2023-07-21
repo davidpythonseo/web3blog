@@ -6,7 +6,7 @@ ShowToc: true
 url: "中國通史"
 TocOpen: true
 ---
-
+![](https://raw.githubusercontent.com/davidpythonseo/web3blog/main/content/post/images/中國通史.png)
 ## 紀錄片《中國通史》
 ```bash
 {
