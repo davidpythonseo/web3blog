@@ -1,0 +1,63 @@
+<!-- {{ $get_google_serp := getJSON "https://serpapi.com/searches/67ca12575958b0a0/64af4cd2dc02f11e330885b3.json"}} -->
+{{ $get_google_serp :=  getJSON (.Get 0 ) }}
+<!-- {{ $get_google_serp }} -->
+{{ range $get_google_serp.organic_results }}
+{{ .title }} <br>
+{{ .link }} <br>
+{{ .snippet }} <br>
+<hr>
+{{ end }} 
+<p style="color: {{ .Get 0 }}">作者:梁瑤</p>
+
+<script>
+(function($) {
+    var ruleId = "37";
+    var link_regular = "";
+    var datas = {
+        type: 'rss',
+        action: 'get_hot_data',
+        url: "https://0xcii.github.io/tag-news-cn-feed/feed.atom"
+    };
+    getList(ruleId);
+    $('#hot-lod-1504715689').on('click', function() {
+        $(this).children('i').addClass('icon-spin');
+        $("#hot-success-1504715689").html('<i class="iconfont icon-loading icon-spin icon-2x"></i>');
+        $("#hot-loading-1504715689").fadeIn(200);
+        getList(ruleId);
+    });
+
+    function getList(id) {
+        $.ajax({
+            url: "https://antcave.club/wp-admin/admin-ajax.php",
+            type: "GET",
+            data: datas,
+            dataType: 'json',
+            cache: true,
+        }).done(function(response) {
+            if (!response.status) {
+                $('#hot-lod-1504715689').children('i').removeClass('icon-spin');
+                $("#hot-success-1504715689").show(200).html(response.data).parent().delay(3500).fadeOut(200);
+                return;
+            }
+            var html = '';
+            var link = '';
+            var data = response.data.entry;
+            $('.title-1504715689').text("币圈热点[中]");
+            $('.slug-1504715689').text("加密快讯");
+            for (var i = 0; i < data.length; i++) {
+                link = data[i].id;
+                if (link_regular !== '') {
+                    link = link_regular.replace("%s%", link);
+                }
+                html += '<div class="d-flex text-sm mb-2"><div><span class="hot-rank hot-rank-' + (i + 1) + ' text-xs text-center">' + (i + 1) + '</span><a class="ml-2" href="' + link + '" target="_blank" rel="external noopener nofollow">' + data[i].title + '</a></div></div>';
+            }
+            $("#hot-loading-1504715689").fadeOut(200);
+            $('#hot-lod-1504715689').children('i').removeClass('icon-spin');
+            $("#hot_news-1504715689").html(html);
+        }).fail(function() {
+            $('#hot-lod-1504715689').children('i').removeClass('icon-spin');
+            $("#hot-success-1504715689").show(200).html('获取失败，请再试一次！').parent().delay(3500).fadeOut(200);
+        });
+    }
+})(jQuery)
+</script>
